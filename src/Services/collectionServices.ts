@@ -34,7 +34,7 @@ export const Collection: collection[] = [
 		id: 5,
 		image: require("../Assets/images/collection2.webp"),
 		path: "collection/bags",
-		title: "bags",
+		title: "belts",
 	},
 	{
 		id: 6,
