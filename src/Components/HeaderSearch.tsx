@@ -23,10 +23,10 @@ const HeaderSearch = () => {
 					search
 				</button>
 			</form>
-			<div className="flex justify-between">
-				<WishIcon className="w-[24px] h-[24px] ml-3 px-[3px]" />
-				<CompareIcon className="w-[24px] h-[24px] ml-3 px-[3px]" />
-				<span className="flex text-xs items-center capitalize ml-3">
+			<div className="flex justify-between cursor-pointer">
+				<WishIcon className="w-[24px] h-[24px] ml-3 px-[3px] hover:fill-[gray]" />
+				<CompareIcon className="w-[24px] h-[24px] ml-3 px-[3px] hover:fill-[gray]" />
+				<span className="flex text-xs items-center capitalize ml-3 hover:fill-[gray] hover:text-[gray] ">
 					<CartIcon className="w-[24px] h-[24px] px-[3px]" />
 					bag(0)
 				</span>

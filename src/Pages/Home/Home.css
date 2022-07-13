@@ -4,6 +4,6 @@
 }
 
 .menu:hover .megamenu {
-	display: flex;
+	display: grid;
 	height: auto;
 }

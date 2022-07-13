@@ -12,6 +12,32 @@ const HeaderNav = () => {
 					<CategoryIcon className="w-[24px] h-[24px]  fill-white" />
 					<p>categories</p>
 				</a>
+				<div className="absolute border text-black border-[lightgray] w-[15rem]">
+					<a href="/" className="mr-2">
+						<p>women</p>
+					</a>
+					<a href="/" className="mr-2">
+						<p>mens</p>
+					</a>
+					<a href="/" className="mr-2">
+						<p>shop</p>
+					</a>
+					<a href="/" className="mr-2">
+						<p>blog</p>
+					</a>
+					<a href="/" className="mr-2">
+						<p>gallery</p>
+					</a>
+					<a href="/" className="mr-2">
+						<p>pages</p>
+					</a>
+					<a href="/" className="mr-2">
+						<p>videos</p>
+					</a>
+					<a href="/" className="mr-2">
+						<p>documentation</p>
+					</a>
+				</div>
 			</div>
 			<div className="flex uppercase justify-between text-[0.9rem] py-[0.5rem] items-center pl-[18rem] absolute">
 				<a href="/" className="mr-2">
@@ -30,7 +56,7 @@ const HeaderNav = () => {
 					<p className="flex  py-auto">
 						mega menu <DropDown className="w-[24px] h-[24px]" />
 					</p>
-					<div className="megamenu absolute py-10 -ml-20 px-20 mt-2 w-screen flex left-0">
+					<div className="megamenu absolute py-10 -ml-20 px-20 mt-2 w-screen grid grid-cols-4 gap-5 left-0">
 						{Collection.slice(0, 3).map((item) => (
 							<a href={item.path}>
 								<img
@@ -71,16 +97,19 @@ const HeaderNav = () => {
 					<p className="flex">
 						mega menu 3 <DropDown className="w-[24px] h-[24px]" />
 					</p>
-					<div className="megamenu absolute py-10 -ml-20 px-20 h-auto mt-2 w-screen flex justify-between left-0">
-						{Collection.slice(4, 15).map((item) => (
-							<a href={item.path}>
-								<img
-									key={item.id}
-									src={item.image}
-									alt={item.title}
-									className="mr-5"
-								/>
-							</a>
+					<div className="megamenu absolute py-10 -ml-20 px-20 mt-2 grid grid-cols-5 gap-3 w-screen left-0">
+						{Collection.slice(4, 15).map((item, index) => (
+							<div className="flex flex-col">
+								<p className="mb-2">collection #{index + 1}</p>
+								<a href={item.path} className="w-fit">
+									<img
+										key={item.id}
+										src={item.image}
+										alt={item.title}
+										className="object-cover"
+									/>
+								</a>
+							</div>
 						))}
 					</div>
 				</a>
