@@ -3,6 +3,8 @@ import { ReactComponent as CategoryIcon } from "../Assets/category.svg";
 import { ReactComponent as DropDown } from "../Assets/downarrow.svg";
 import { Collection } from "Services/collectionServices";
 import { products } from "Services/ProductService";
+import Categories from "./Categories";
+import HeroSc from "./HeroSc";
 
 const HeaderNav = () => {
 	return (
@@ -12,51 +14,27 @@ const HeaderNav = () => {
 					<CategoryIcon className="w-[24px] h-[24px]  fill-white" />
 					<p>categories</p>
 				</a>
-				<div className="absolute border text-black border-[lightgray] w-[15rem]">
-					<a href="/" className="mr-2">
-						<p>women</p>
-					</a>
-					<a href="/" className="mr-2">
-						<p>mens</p>
-					</a>
-					<a href="/" className="mr-2">
-						<p>shop</p>
-					</a>
-					<a href="/" className="mr-2">
-						<p>blog</p>
-					</a>
-					<a href="/" className="mr-2">
-						<p>gallery</p>
-					</a>
-					<a href="/" className="mr-2">
-						<p>pages</p>
-					</a>
-					<a href="/" className="mr-2">
-						<p>videos</p>
-					</a>
-					<a href="/" className="mr-2">
-						<p>documentation</p>
-					</a>
-				</div>
+				<Categories />
 			</div>
+			<HeroSc />
 			<div className="flex uppercase justify-between text-[0.9rem] py-[0.5rem] items-center pl-[18rem] absolute">
-				<a href="/" className="mr-2">
+				<a href="/" className="mr-2 hover:text-[gray]">
 					<p>about</p>
 				</a>
-				<a href="/" className="mr-2">
+				<a href="/" className="mr-2 hover:text-[gray]">
 					<p>delivery</p>
 				</a>
-				<a href="/" className="mr-2">
+				<a href="/" className="mr-2 hover:text-[gray]">
 					<p>payment</p>
 				</a>
-				<a href="/" className="mr-2">
+				<a href="/" className="mr-2 hover:text-[gray]">
 					<p>contacts</p>
 				</a>
 				<a href="/" className="menu py-[0.5rem] mr-2">
-					<p className="flex  py-auto">
+					<p className="flex py-auto hover:text-[gray] hover:fill-[gray]">
 						mega menu <DropDown className="w-[24px] h-[24px]" />
 					</p>
-					<div className="megamenu absolute py-10 -ml-20 px-20 mt-2 w-screen grid grid-cols-4 gap-5 left-0">
+					<div className="megamenu absolute py-10 bg-[white] -ml-20 px-20 mt-2 w-screen grid grid-cols-4 gap-5 left-0">
 						{Collection.slice(0, 3).map((item) => (
 							<a href={item.path}>
 								<img
@@ -70,10 +48,10 @@ const HeaderNav = () => {
 					</div>
 				</a>
 				<a href="/" className="menu py-[0.5rem] mr-2">
-					<p className="flex">
+					<p className="flex hover:text-[gray] hover:fill-[gray]">
 						mega menu 2 <DropDown className="w-[24px] h-[24px]" />
 					</p>
-					<div className="megamenu absolute py-10 -ml-20 px-20 mt-2 w-screen grid grid-cols-4 gap-5 left-0">
+					<div className="megamenu absolute py-10 -ml-20 px-20 bg-[white] mt-2 w-screen grid grid-cols-4 gap-5 left-0">
 						{products.map((item) => (
 							<div className="block">
 								<a href={item.path}>
@@ -94,10 +72,10 @@ const HeaderNav = () => {
 					</div>
 				</a>
 				<a href="/" className="menu py-[0.5rem] mr-2">
-					<p className="flex">
+					<p className="flex hover:text-[gray] hover:fill-[gray]">
 						mega menu 3 <DropDown className="w-[24px] h-[24px]" />
 					</p>
-					<div className="megamenu absolute py-10 -ml-20 px-20 mt-2 grid grid-cols-5 gap-3 w-screen left-0">
+					<div className="megamenu absolute py-10 -ml-20 px-20 mt-2 bg-[white] grid grid-cols-5 gap-3 w-screen left-0">
 						{Collection.slice(4, 15).map((item, index) => (
 							<div className="flex flex-col">
 								<p className="mb-2">collection #{index + 1}</p>

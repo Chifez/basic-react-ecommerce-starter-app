@@ -5,6 +5,7 @@ import { getAllProducts } from "Services/ProductService";
 import HomeNav from "Components/HomeNav";
 import HeaderSearch from "Components/HeaderSearch";
 import HeaderNav from "Components/HeaderNav";
+import HeroSc from "Components/HeroSc";
 
 function Home() {
 	const { increment } = useCartContext();
@@ -18,6 +19,7 @@ function Home() {
 				<HeaderSearch />
 			</div>
 			<HeaderNav />
+			{/* <HeroSc /> */}
 		</div>
 		// {/* <h1>Products</h1>
 		// <div className="grid grid-cols-6 p-2">
